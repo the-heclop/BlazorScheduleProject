@@ -2,6 +2,7 @@
 @using System.Net.Http
 @using System.Net.Http.Json
 @inject HttpClient Http
+@inject NavigationManager NavigationManager
 
 <h3>AvailableTimes</h3>
 
@@ -87,8 +88,8 @@ else
         {
             var eventRequest = new AvailableTimeBlock()
             {
-                    
-                    
+
+
                     Summary = reason.summary,
                     Description = reason.description,
                     Start = time.Start,
@@ -102,7 +103,7 @@ else
 
             if (response.IsSuccessStatusCode == true)
             {
-                
+                SuccessSchedule();
             }
                        
         }
@@ -110,6 +111,9 @@ else
         
     }
 
-    
+    private void SuccessSchedule()
+    {
+        NavigationManager.NavigateTo("/");
+    }
    
 }

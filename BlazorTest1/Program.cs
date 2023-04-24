@@ -13,15 +13,15 @@ using Blazored.LocalStorage;
 
 var builder = WebApplication.CreateBuilder(args);
 
-void ConfigureServices(IServiceCollection services)
-{
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<UserContext>();
-    //services.AddDbContext<UserContext>(options =>
-    //    options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
-    //services.AddScoped(provider => new UserContext(new DbContextOptionsBuilder<UserContext>().UseSqlServer(builder.Configuration.GetConnectionString("Default")).Options));
-}
+//void ConfigureServices(IServiceCollection services)
+//{
+//    services.AddRazorPages();
+//    services.AddServerSideBlazor();
+//    services.AddSingleton<UserContext>();
+//    //services.AddDbContext<UserContext>(options =>
+//    //    options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+//    //services.AddScoped(provider => new UserContext(new DbContextOptionsBuilder<UserContext>().UseSqlServer(builder.Configuration.GetConnectionString("Default")).Options));
+//}
 
 // Add services to the container.
 builder.Services.AddRazorPages();
