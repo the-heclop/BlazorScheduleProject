@@ -1,0 +1,36 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>My Projects</PageTitle>
+
+
+<div class="container">
+    <div class="nav navbar">
+        <Navbar />
+     </div>
+</div>
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>  
+
+    <main>
+        <div class="top-row px-4">
+
+            <div class="dropdown">
+              <button class="dropdown-button btn btn-primary">Account</button>
+              <div class="dropdown-content">
+                <a href="login.html">Login</a>
+                <a href="/register">Register</a>
+               </div>
+            </div>
+
+            @*<a href="register" target="_blank">Account</a>*@
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>

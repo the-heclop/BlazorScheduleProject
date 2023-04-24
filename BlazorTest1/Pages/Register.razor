@@ -1,0 +1,32 @@
+﻿@page "/register"
+@using System.Linq
+@using BlazorTest1.DataAccess
+@using BlazorTest1.Modelss
+@inject NavigationManager NavigationManager
+@inject UserContext DbContext
+
+
+
+<h3>Registration</h3>
+
+
+
+    <EditForm Model="@_user" OnValidSubmit="HandleValidSubmit" id="register-form">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group ">
+        <label for="FirstName">Name:</label>
+        <InputText id="FirstName" class="form-control" @bind-Value="_user.Username" />
+    </div>
+        
+    <div class="form-group">
+        <label for="Password">Password:</label>
+        <InputText type="password" id="Password"class="form-control " @bind-Value="_user.Password" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+    </EditForm>
+
+
+
